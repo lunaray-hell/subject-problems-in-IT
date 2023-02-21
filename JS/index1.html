@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+
+<p>
+Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+Ab optio ut error labore nostrum reprehenderit aspernatur
+et ad, ipsum quaerat voluptatibus dignissimos similique,
+deleniti minus quam, alias corporis dolore blanditiis!
+</p>
+
+<script>
+//alert('Hello World!');
+//let a = confirm('Hello World!');
+// if (a) {
+//alert('Lorem');
+//}
+// console.log('a: ', a)
+
+//let b = prompt('Сколько вам лет?');
+//console.log('b: ', b);
+
+let a = " ldfksd 'ddf' f";
+let b = 1212.56;
+let c = true; //true/false
+
+let d = undefined;
+let e = null;
+
+let arr = ['asasas', 12121, null, undefined]; //массив
+let arr1 = new Array(12,323,'');
+
+
+console.log(typeof a, typeof b, typeof c, d, e, typeof e, arr, typeof arr, arr[1], arr1);
+
+let cat = {
+name: 'Happy',
+color: 'green',
+age: 4,
+gender: false
+};
+
+//console.log(cat);
+
+/* (многострочный комментарий)
+let sum = 5 + 5;
+let div = 65 / 5;
+let mul = 6 * 5;
+let div2 = 5 % 2; //остаток от деления
+console.log('sum:',sum, 'div:', div, 'mul:', mul, 'div2:', div2); //'строка', название переменной
+*/
+
+let a1= 83;
+//console.log(++a1);
+//console.log(a1);
+
+//a1= a1 / 6;
+// a1 /= 6;
+// a1 += 6;
+// a1 += 10;
+// console.log(a1);
+
+// a1 /=6;
+// console.log(a1.toFixed(2));
+
+let str1 = 'Price';
+let str2 = '$';
+let price = (a1 / 6).toFixed(2);
+let str3 = str1 +' '+ str2;
+let str4 = `${str1} product: ${price} ${str2} `;
+str4 += ' small';
+
+let str_len = str4.length;  //dlina stroki
+let first_char = str4[0];   //first simbol
+let last_char = str4[str4.length - 1]; //last simbol
+console.log(str4, str_len, first_char,last_char);
+
+let has_str = str4.includes('product'); //vchozhdeniye v stroku
+let index = str4.indexOf('$'); //index podstroki
+let sub = str4.substr(0, index); //вырезаем из строки. начиная с 0 по индекс
+let repl = str4.replace('$', 'р.'); //ЗАМЕНА ПОДСТРОКИ с доллара на р.
+let sl = str4.slice(index, index + 5); //вырезает после индекса 
+
+console.log(has_str, index,'sub: ', sub, 'repl: ', repl, 'slice: ', sl);
+ 
+let sp = str4.split(' '); //
+console.log(sp);
+
+
+//домашка 1) заменить часть код строки let str55 длинные строки конкатинировать.. менять символы вырезать слова
+// с той же строкой нужно достать первое предложение и наоборото только последнее предложение
+//вывести последнее слово из предпоследнего предложения 
+</script>
+</body>
+</html>

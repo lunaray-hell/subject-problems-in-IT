@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+
+<script>
+
+let str = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, quam odio nam magni quas obcaecati ratione et mollitia consectetur nulla qui vel error quibusdam, iusto maxime cumque! Corrupti, aspernatur earum.'+
+'Reprehenderit necessitatibus laborum libero ipsam voluptatibus veniam ducimus corporis hic dolor quis? Numquam, ad commodi nemo autem accusantium itaque dolore veritatis aspernatur, voluptate molestias esse qui blanditiis explicabo saepe eos.' +
+'Perferendis ipsa adipisci, a, labore rem ipsum amet, nihil aliquid expedita harum non. Deleniti, numquam? Iusto rerum harum voluptatum laboriosam, aliquam similique reprehenderit esse repudiandae amet quo itaque veniam praesentium.' + 
+'Repudiandae sunt qui nam quaerat optio iusto quam delectus. Cum, ab amet tempora non laborum iusto nulla ipsam. Magnam numquam quia eveniet ut iure illum, aut ducimus? Odit, aperiam blanditiis!' +
+'Dicta adipisci quia totam quidem, temporibus a error ea modi in enim vero blanditiis quod non nesciunt? Aliquam debitis veniam dolorem fuga laudantium dignissimos necessitatibus cum, accusantium nemo nostrum quas.';
+
+let task1 = str.replaceAll('u','*');
+
+console.log('The first: ', task1);
+
+let index_2 = str.indexOf('.');
+let task2 = str.substr(0, index_2+1);
+
+console.log('The second: ', task2);
+
+let index_l = str.lastIndexOf('?');
+let task3 = str.substr(index_l+1);
+
+console.log('The third: ', task3);
+
+let index = str.lastIndexOf(' ', index_l);  
+let task4 = str.slice(index+1, index_l);
+console.log('The fourth:', task4);
+
+//1) заменить часть код строки let str55 длинные строки конкатинировать.. zamenit' the letter to sign *
+//2) с той же строки нужно достать первое предложение и наоборот только последнее предложение
+//3) вывести последнее слово предпоследнего предложения 
+</script>
+</body>
+</html>

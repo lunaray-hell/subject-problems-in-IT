@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+        
+        let str = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, quam odio nam magni quas obcaecati ratione et mollitia consectetur nulla qui vel error quibusdam, iusto maxime cumque! Corrupti, aspernatur earum.'+
+        'Reprehenderit necessitatibus laborum libero ipsam voluptatibus veniam ducimus corporis hic dolor quis? Numquam, ad commodi nemo autem accusantium itaque dolore veritatis aspernatur, voluptate molestias esse qui blanditiis explicabo saepe eos.' +
+        'Perferendis ipsa adipisci, a, labore rem ipsum amet, nihil aliquid expedita harum non. Deleniti, numquam? Iusto rerum harum voluptatum laboriosam, aliquam similique reprehenderit esse repudiandae amet quo itaque veniam praesentium.' + 
+        'Repudiandae sunt qui nam quaerat optio iusto quam delectus. Cum, ab amet tempora non laborum iusto nulla ipsam. Magnam numquam quia eveniet ut iure illum, aut ducimus? Odit, aperiam blanditiis!' +
+        'Dicta adipisci quia totam quidem, temporibus a error ea modi in enim vero blanditiis quod non nesciunt? Aliquam debitis veniam dolorem fuga laudantium dignissimos necessitatibus cum, accusantium nemo nostrum quas!';
+
+    let str_1 = str.split(' ');
+
+        console.log('words:', str_1);
+
+    let arr = [];
+    for (let i = 0; i < str_1.length; i++) {
+    if (str_1[i].includes('a') == true) {
+        arr.push(str_1[i]);
+    }
+    }
+    for (let j = 0; j < arr.length; j++) {
+       console.log(arr[j]);
+    }
+
+    let str_2 =``;
+    for (let k = 0; k < arr.length; k++) {
+        str_2 += arr[k] + ' ';
+    }
+       console.log('sentence:', str_2);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questioning</title>
+</head>
+<body>
+    <script>
+        let full_name = prompt("Vvedite FIO");
+
+        let arr_full_name = full_name.split(' ');
+
+        let middle_name = arr_full_name[arr_full_name.length - 1];
+
+        console.log('FIO:', full_name);
+
+        function gender(middle_name) {
+            let end_index = middle_name.length - 1;
+            let pre_end_index = end_index - 1;
+            let last_symbol = (middle_name[pre_end_index] + middle_name[end_index]).toUpperCase();
+
+            let gender ;
+            
+            if (last_symbol == 'ИЧ') {
+                gender = 'М'; 
+            } else if (last_symbol == 'ЛЫ') {
+                gender = 'М'; 
+            } else if (last_symbol == 'НА') {
+                gender = 'Ж';  
+            } else if (last_symbol == 'ЗЫ') {
+                gender = 'Ж';  
+            }
+
+            return gender;
+
+        }
+            let g = gender(middle_name)
+
+            console.log('Gender:', g);
+
+        function selectCar(middle_name) {
+            if (g  == 'Ж') {               
+                car = 'BMW';
+            }
+           
+        else
+            if (g  == 'М') {          // == 'М'       
+                car = 'Nissan';
+            }
+
+            return car;
+
+        }
+
+        let userCar = confirm("Ur car " + selectCar(middle_name) + "?");
+
+        let realCar;
+        
+            if (userCar) {
+             alert("Cool");
+
+             console.log('Car brand: ', selectCar(middle_name));  
+
+        } else {
+             realCar = prompt('What is ur car brand?');
+             alert('Ok');
+             console.log('Car brand valid:', realCar);
+        }
+        
+//problem когда вводится ж имя, и когда выбираю "другой брэнд" 
+//все равно выводится бмв + брэнд машины которую ввела.. с м так же или так и должно быть? исправила(а надо было?)
+    </script>
+</body>
+</html>

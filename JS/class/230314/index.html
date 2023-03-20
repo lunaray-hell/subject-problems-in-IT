@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = 'Hello world!'
+        //вначале должны находится обязательные параметры
+        function scope(name, last_name, car = 'BMW',second_name) { //указали значение по умолчанию 
+            //let b = 'bip-bip';
+            //alert(name);
+
+            if (second_name == undefined) {
+                second_name = 'Петрович';
+            }
+
+            console.log('name: ',name,
+            'car: ', car,
+            'last_name:',last_name,
+            'second_name:',second_name);
+        }
+
+        function gender(midle_name) {
+            let end_index = midle_name.length - 1;
+            let pre_end_index = end_index - 1;
+            let last_symbol = (midle_name[pre_end_index] + midle_name[end_index]).toUpperCase();
+
+            let gender = true;
+            
+            if (last_symbol == 'ИЧ') {
+                gender = false; //m
+            } else if (last_symbol == 'ЛЫ') {
+                gender = false; //m
+            } else if (last_symbol == 'НА') {
+                gender = true;  //ж
+            } else if (last_symbol == 'ЗЫ') {
+                gender = true;  //ж
+            }
+
+            return gender;
+
+        }
+
+        scope('Анна','Рябова');
+        scope('Альберт','Нестеров','Nissan');
+
+        function selectCar(midle_name) {
+            let car = 'BMW';
+
+            let g = gender(midle_name)
+
+            if (!g) { //!-отрицание
+                car = 'Nissan';
+            }
+
+            return car;
+
+        }
+
+        console.log('selectCar:',selectCar('Александрович'))
+
+        //let g = gender('Александрович');
+        //console.log('gender: ',g);
+
+
+        //let right = confirm('Верно?');
+        //console.log('right:',right);
+
+
+        let f = function(text)  {
+            console.log('text:',text);
+        };
+
+        //console.log(f);
+        //f('echo');
+
+        let arrowFunc = (a,b) => {
+            console.log(a+b);
+        }
+
+        arrowFunc(2,8);
+        //       if(gender) {return 'BMW'} else {return 'Nissan'}
+        let userCar = (gender) => gender ? 'BMW' : 'Nissan'; //короткая запись if
+        //если условие перед ? выполняется, то выполняется первое, инчае второе(то, что после :)
+        console.log('userCar:',userCar());
+    </script>
+</body>
+</html>

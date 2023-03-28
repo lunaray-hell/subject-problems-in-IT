@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Функции для работы с массивом</title>
+</head>
+<body>
+    <h1>Функции для работы с массивом</h1>
+
+    <script>
+        let arr = [15, 56, 21, 88, 77, 1, 9, 132, 45, 37];
+
+        let arr2 = arr.filter((item, index, array) => {
+            // console.log(item);
+
+            return item > 50;
+            
+        });
+
+        let arr3 = arr
+        .map((item, index, array) => {
+            return item > 50 ? item / 2 : item * 2;
+        })
+        .filter(item => item > 40);
+
+        // let arr4 = arr.sort((a, b) => {
+        //     if (a > b) return 1;
+        //     if (a === b) return 0;
+        //     if (a < b) return -1;
+
+        // });
+
+        // let arr4 = arr.sort((a, b) => a - b);
+
+        // let arr5 = arr.reverse();
+
+        arr = [1, 2, 3, 4, 5];
+
+        let arr6 = arr.reduce((sum, item, index, array) => {
+            return sum * item;
+        }, 1);
+
+        /* лотерея есть число, которое 
+        если сумма чисел в ЗП равна этому числу то конгретулэйшн иначе ты лох*/
+
+        console.log(arr6);
+    </script>
+</body>
+</html>

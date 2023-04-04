@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Объекты</title>
+</head>
+<body>
+    <h1>Object</h1>
+
+    <script>
+         let user = {
+               "emp_no": 10001,
+               "salaries": [
+                    {
+                    "salary": "60117",
+                    "from_date": "1986-06-26",
+                    "to_date": "1987-06-26"
+               },
+               {
+                    "salary": "62102",
+                    "from_date": "1987-06-26",
+                    "to_date": "1988-06-25"
+               },
+               {
+                    "salary": "66074",
+                    "from_date": "1988-06-25",
+                    "to_date": "1989-06-25"
+               },
+               {
+                    "salary": "66596",
+                    "from_date": "1989-06-25",
+                    "to_date": "1990-06-25"
+               },
+               {
+                    "salary": "71046",
+                    "from_date": "1991-06-25",
+                    "to_date": "1992-06-24"
+               },
+               ]
+        };
+        let arr_sal = user.salaries.map((o => o.salary));
+
+               let arr_s = arr_sal.map(i => i.split(""));
+
+               let un_num = [];
+
+               for (let i = 0; i < arr_s.length; i++) {
+
+                   un_num[i] = arr_s[i].reduce((p, c) => Number(p) + Number(c), 0)
+                   };
+                   
+               let win_lot = '15';
+
+               // console.log(typeOf(+aaa)); //чтобв преобразовать строку в число перед переменной поставить + 
+          
+
+               //из числа в строку пустую строку ''
+
+               alert("Congratulations, u'r not a sucker)");
+           
+          console.log(arr_sal);
+          console.log(un_num);  
+
+                // let unique = arr_sal.map(o => un_num[i] = arr_s[i].reduce((p, c) => Number(p) + Number(c)));
+                //           let u_num = arr_salary.map((item) => {
+                // return item.reduce((sum, item, index, array) => {
+                // return (+sum) + (+item);
+                // });
+                // });
+      
+                // let aaa = '18';
+                // let w = u_num.filter(item => item == aaa);
+
+                //рефакторинг нужен когда код может устареть (как рефакторить? )
+                //react библиотека фреймворк
+    </script>
+</body>
+</html>
